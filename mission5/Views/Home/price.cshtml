@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Tutoring Services Calculator";
+    Layout = "_Layout";
+}
+
+<section>
+    <h2>Calculate Your Total Cost</h2>
+
+    <div>
+        <label for="hours">Enter number of hours you need tutoring:</label><br />
+        <input type="number" id="hours" placeholder="Enter hours" min="1" />
+    </div>
+
+    <div>
+        <label for="hourly-rate">Hourly Rate: $</label>
+        <input type="text" id="hourly-rate" value="25" readonly />
+    </div>
+
+    <button id="calculateBtn">Calculate Total</button>
+
+    <div>
+        <p>Total: <span class="output" id="total-output"></span></p>
+    </div>
+
+    <div>
+        <a href="/" class="nav-link">Back to Home</a>
+    </div>
+</section>
