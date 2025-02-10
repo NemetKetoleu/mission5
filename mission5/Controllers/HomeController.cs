@@ -6,7 +6,7 @@ namespace mission5.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return View("price");
         }
 
         public IActionResult price()

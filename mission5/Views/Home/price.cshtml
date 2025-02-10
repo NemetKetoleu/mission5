@@ -1,28 +1,28 @@
-﻿@{
-    ViewData["Title"] = "Tutoring Services Calculator";
-    Layout = "_Layout";
-}
+﻿<h2>Calculate Tutoring Price</h2>
 
-<section>
-    <h2>Calculate Your Total Cost</h2>
+<form>
+    <!-- Input for the number of hours the user needs tutoring -->
+    <label for="txtHours">Number of Hours:</label>
+    <input type="number" id="txtHours" min="1" placeholder="Enter hours" />
+    <br />
 
-    <div>
-        <label for="hours">Enter number of hours you need tutoring:</label><br />
-        <input type="number" id="hours" placeholder="Enter hours" min="1" />
-    </div>
+    <!-- Fixed charge per hour (non-editable) -->
+    <label for="txtCharge">Charge Per Hour:</label>
+    <input type="text" id="txtCharge" value="50" readonly />
+    <br />
 
-    <div>
-        <label for="hourly-rate">Hourly Rate: $</label>
-        <input type="text" id="hourly-rate" value="25" readonly />
-    </div>
+    <!-- Button to calculate the total cost -->
+    <input type="button" value="Calculate Total" id="btnCalculate" />
 
-    <button id="calculateBtn">Calculate Total</button>
+    <br />
 
-    <div>
-        <p>Total: <span class="output" id="total-output"></span></p>
-    </div>
+    <!-- Output for showing the total cost -->
+    <label for="txtTotal">Total Cost:</label>
+    <input type="text" id="txtTotal" readonly />
+</form>
 
-    <div>
-        <a href="/" class="nav-link">Back to Home</a>
-    </div>
-</section>
+<!-- Link to the jQuery library -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Link to the custom JavaScript file -->
+<script src="~/js/scripts.js"></script>
